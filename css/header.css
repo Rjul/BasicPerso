@@ -1,0 +1,224 @@
+@font-face {
+	font-family: "atmospheric";
+    src: url('../polices/a_atmospheric/aAtmospheric.ttf');
+}
+@font-face {
+    font-family: "batmfa";
+    src: url('../polices/batman_forever/batmfa_.ttf');
+}
+body{
+    display: flex;
+    background-color : rgb(255, 255, 255);
+    justify-content: center;
+    margin : 0;
+    padding : 0;
+}
+#page{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    /*min-width : 1100px;*/
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(19, 18, 18);
+    overflow: hidden;
+}
+header{
+    /*
+    position: absolute;
+    top: -90px;
+    left: -50px;
+    width: 100%;
+    padding-top: 100px;
+    padding-left: 50px;
+    background-color: rgb(2, 2, 2); 
+    */
+    animation: headerAnim 2s linear both;
+
+    
+    
+}
+#divHeader{
+    height: 20%
+}
+#header_slider{
+    display: flex;
+    justify-content: center;
+    align-content: center;    
+}
+#header_title{
+    justify-content: center;
+    align-content: center;    
+    animation: titleAnim 2s ease-in both;
+    animation-delay: 1s;
+
+}
+header p {
+    margin-top : 0px;
+    font-family: "batmfa";
+    color:rgb(51, 58, 63);
+    text-shadow: white 1px 1px 0px ;
+}
+header h1{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    
+}
+header section{
+    font-family: "atmospheric";
+    
+}
+nav{
+    text-align: right;
+    font-size : 30px;
+}
+nav span{
+    padding-right: 45px;
+    text-align: center;
+    background: linear-gradient(to right, rgb(2, 67, 165) 20%, rgb(35, 33, 161) 40%, rgb(4, 41, 163) 60%, rgb(3, 87, 214) 80%);
+    background-size: 200% auto;    
+    color: rgba(0, 0, 0, 0);
+    background-clip: text; 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    text-shadow: 1px 2px rgba(255, 254, 254, 0.377),  0 0 0.2em rgba(84, 84, 245, 0.123);   
+   
+    /*animation-delay: 3s;*/
+
+}
+#header_title section {
+    text-align: center;    
+    background: linear-gradient(to right, rgb(61, 126, 248) 20%, rgb(0, 26, 255) 40%, rgb(0, 26, 255) 60%, rgb(70, 127, 233) 80%);
+    background-size: 300% auto;    
+    color: rgba(0, 0, 0, 0);
+    background-clip: text; 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;    
+    animation: shineAnim 1s linear infinite;
+}
+#header_title section:hover{
+    background: linear-gradient(to right, rgb(233, 1, 1) 20%, rgb(202, 3, 3) 40%, rgb(161, 1, 1) 60%, rgb(114, 0, 0) 80%);
+    color: rgba(0, 0, 0, 0);
+    background-clip: text;
+    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#corp{
+    position: absolute;
+    top : 300px;
+    display: flex;
+    flex-direction: column;
+
+}
+section div{
+    position: relative;
+    top: -100px;
+    display: flex;
+    justify-content: right;
+}
+img{
+    width: 20%;
+    height: auto;
+    border-radius: 5%;
+}
+h2{
+    color: slategray;
+    text-shadow: 1px 2px rgb(255, 254, 254); 
+
+}
+/*
+@keyframes shineAnim {
+      to {
+        background-position: 200% center;
+      }
+}
+/*
+@keyframes navAnim{
+    from{
+        background-position : 200% left;
+    }
+    to{
+        background-position: 200% center;
+       
+    }
+}
+*/
+@keyframes headerAnim{
+    100%{
+        transform: rotate(-3deg);
+        /*
+        border: rgb(36, 36, 36) 4px groove;
+        -webkit-box-shadow: 0px 3px 3px 0px rgb(99, 98, 98);
+        -moz-box-shadow: 0px 3px 3px 0px rgb(117, 117, 117);
+        box-shadow: 0px 3px 3px 0px rgb(87, 87, 87);
+        */
+    }
+}
+@keyframes titleAnim{
+    0%{
+        position :relative;
+        left : 0;
+        
+    }
+    to{
+        position :relative;
+        left : -10%;
+        
+    }
+}
+/*
+@media all and (max-width : 1700px){
+    #header_title{ 
+        animation: titleAnim 2s ease-in both;
+    }    
+    @keyframes titleAnim{
+        0%{
+            position :relative;
+            left : 0;
+        }
+        to{
+            position :relative;
+            left : -10%;
+            
+        }
+    }
+}
+@media all and (max-width : 1300px){
+    #header_title{ 
+        animation: titleAnim 2s ease-in both;
+    }    
+    @keyframes titleAnim{
+        0%{
+            position :relative;
+            left : 0;
+        }
+        to{
+            position :relative;
+            left : -10%;
+            
+        }
+    }
+}
+@media all and (max-width : 1100px){
+    #header_title{ 
+        animation: titleAnim 2s ease-in both;
+    }    
+    @keyframes titleAnim{
+        0%{
+            position :relative;
+            left : 0;
+        }
+        to{
+            position :relative;
+            left : -10%;
+            
+        }
+    }
+}
+
+  
+  
