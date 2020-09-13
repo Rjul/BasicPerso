@@ -34,18 +34,54 @@ h1{
     font-family:"atmos";
     font-size: 1.5em;;
 }
-ul{
+nav{
     display: flex;
     align-items: flex-end;
-    width: 50%;
-}
-li{
-    list-style: none;
-    font-size: 22px ;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
 
 }
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end ;
+    width: 100%;
+}
+nav li{
+    list-style: none;
+    font-size: 22px ;
+    padding: 5px
+
+}
+nav li:hover{
+    position : relative;
+    animation: navListHover 0.2s ease-in-out both;
+
+}
+nav li:not(:hover){
+    position : relative;
+    animation: navListHoverNot 0.2s ease-in-out both; 
+}
+@keyframes navListHover {
+    to {
+        position: relative;
+        top: -2px;
+        font-size: 24px ;
+    }   
+}
+@keyframes navListHoverNot {
+    from{
+        position: relative;
+        top: -2px;
+        font-size: 24px ;
+    }
+    to {
+        position: relative;
+        top: 0px;
+        font-size: 22px ;
+    }   
+}
+
+
 #hero{
     display: flex;
     flex-direction: column;
@@ -115,7 +151,12 @@ li{
     border-bottom:gray 1px groove;
    
 }
-@media all and (max-device-width:500px){
+@media all 
+    and (max-device-width:650px)
+    ,(max-width:650px) {
+    #page{
+        min-width: 480px;
+    }
     h1{
         font-size: 2.5em;
     }
@@ -142,14 +183,25 @@ li{
         font-size:2em;
 
     }
+    #content{
+        display: block;
+    
+        width: 100%;
+        height: 100%;
+    
+    }
 
 
 
     #section1{
-        flex : 1;
+        display: block;
         border-right: gray 1px groove;
-        padding: 5px;
+        border-bottom: gray 1px groove;
+        padding: 10px;
+        margin-right: 5px;
         font-size: 1.5em;
+        position:relative;
+        float: left;
     
     }
     #section1 > img{
@@ -161,13 +213,23 @@ li{
         
     }
     #section2 {
-        flex : 2;
-        padding: 5px;
+        
+        padding: 8px;
         font-size : 1.5em;
        
     }
     #section2 > div {
-        border-bottom:gray 1px groove;
+        border-bottom:none;
+    }
+    
+    nav li:hover{
+        position : relative;
+        animation: navListHover 0.2s ease-in-out both;
+        
+    }
+    nav li:not(:hover){
+        position : relative;
+        animation: navListHoverNot 0.2s ease-in-out both;
 
 }
 }
