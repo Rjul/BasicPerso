@@ -11,7 +11,6 @@ var eltClickId;
 /// Function de modification du corp de la page ///
 
 function editElt(contenu){
-    console.log(contenu)
     console.log('ok')
     document.getElementById("content").innerHTML = contenu;
 }
@@ -22,32 +21,46 @@ function editElt(contenu){
 
 function navSelected (idElt){
     switch(idElt){
-        case "presentation": ajaxGet("./HTML/presentation.html", editElt)
+        case "presentation": 
+            ajaxGet("./HTML/presentation.html", editElt);
+            break;
         case "cv":
+             ajaxGet("./HTML/cv.html", editElt);
+             break;
         case "portefolio":
+            break;
+
         case "contact":
+            break;
+
+        default:
+            console.error("navSelected function, was a parameter not defined")
     }
 }
 
 /// Creation des events de nav ///
 
 navPrensentationElt.addEventListener("click", (e) => {
-    e.preventDefault();
+    e.stopPropagation();
     eltClickId = navPrensentationElt.id;
+    console.log("presentation CLICK")
     navSelected(eltClickId);
-} )
+    
+} );
 navcvElt.addEventListener("click", (e) => {
-    e.preventDefault();
+    e.stopPropagation();
     eltClickId = navcvElt.id;
+    console.log("cv CLICK")
     navSelected(eltClickId);
-} )
+    
+} );
 navporteFolioElt.addEventListener("click", (e) => {
-    e.preventDefault();
+    e.stopPropagation();
     eltClickId = navporteFolioElt.id;
     navSelected(eltClickId);
-} )
+} );
 navcontactElt.addEventListener("click", (e) => {
-    e.preventDefault();
+    e.stopPropagation();
     eltClickId = navcontactElt;
     navSelected(eltClickId);
-} )
+} );
