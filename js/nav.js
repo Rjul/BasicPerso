@@ -64,3 +64,8 @@ navcontactElt.addEventListener("click", (e) => {
     eltClickId = navcontactElt;
     navSelected(eltClickId);
 } );
+
+
+////   Appelle des fonctions init   ///
+
+ajaxGet("./cv.html", editElt);

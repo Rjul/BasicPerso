@@ -82,9 +82,10 @@ li{
     display: flex;
 
     width: 100%;
-    height: 500px;
+    height: 100%;
 
 }
+
 #presentationBox{
     padding-left: 20px;
     padding-right: 20px; 
@@ -93,22 +94,81 @@ li{
     flex : 1;
     border-right: gray 1px groove;
     padding: 5px;
+    font-size: 1.2em;
 
 }
 #section1 > img{
     width: 80px;
     height: 100px;
     float: right;
+    padding-top: 15px;
+    padding-right: 15px;
     
 }
 #section2 {
     flex : 2;
     padding: 5px;
+    font-size : 1.2em;
    
 }
 #section2 > div {
     border-bottom:gray 1px groove;
    
+}
+@media all and (max-device-width:500px){
+    h1{
+        font-size: 2.5em;
+    }
+    header ul {
+        position : absolute;
+        display: flex;
+        align-items: flex-end;
+        width: auto;
+        flex-direction: column ;
+        right: 10px;
+      
+    }
+    header ul li {
+        padding-bottom: 20px;
+        font-size : 2em;
+    }
+    #hero h2{
+        font-size : 2.5em;
+    }
+    #hero > p {
+        font-size : 1.5em;
+    }
+    #presentationBox{
+        font-size:2em;
+
+    }
+
+
+
+    #section1{
+        flex : 1;
+        border-right: gray 1px groove;
+        padding: 5px;
+        font-size: 1.5em;
+    
+    }
+    #section1 > img{
+        width: 80px;
+        height: 100px;
+        float: right;
+        padding-top: 15px;
+        padding-right: 15px;
+        
+    }
+    #section2 {
+        flex : 2;
+        padding: 5px;
+        font-size : 1.5em;
+       
+    }
+    #section2 > div {
+        border-bottom:gray 1px groove;
+
 }
 
 
