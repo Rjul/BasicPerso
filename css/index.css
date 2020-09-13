@@ -10,7 +10,7 @@
 
 body{
     margin: 0;
-    background-color: rgb(207, 207, 207);
+    background-color: rgb(207,207,207);
 
 }
 #page{
@@ -19,14 +19,13 @@ body{
     margin-top:0;
     margin-left:auto;
     margin-right: auto;
-    border: slategrey 3px groove;
+   /* border: rgb(215, 231, 248) 3px groove;  */
 
 }
 header{
+    margin: 0;
     display: flex;
     justify-content: space-between;
-    padding-left: 10px;
-    padding-right: 10px;
     background: linear-gradient(to bottom, rgb(184, 183, 183) 30%, rgb(207, 207, 207) 70%);
     padding-left: 20px;
     padding-right: 20px;
@@ -93,9 +92,24 @@ li{
 #section1{
     flex : 1;
     border-right: gray 1px groove;
+    padding: 5px;
+
 }
-#section2{
+#section1 > img{
+    width: 80px;
+    height: 100px;
+    float: right;
+    
+}
+#section2 {
     flex : 2;
-    border-bottom: gray 1px groove;
+    padding: 5px;
+   
 }
+#section2 > div {
+    border-bottom:gray 1px groove;
+   
+}
+
+
 
