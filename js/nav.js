@@ -22,10 +22,10 @@ function editElt(contenu){
 function navSelected (idElt){
     switch(idElt){
         case "presentation": 
-            ajaxGet("./HTML/presentation.html", editElt);
+            ajaxGet("./presentation.html", editElt);
             break;
         case "cv":
-             ajaxGet("./HTML/cv.html", editElt);
+             ajaxGet("./cv.html", editElt);
              break;
         case "portefolio":
             break;
